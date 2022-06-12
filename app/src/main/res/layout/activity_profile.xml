@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileActivity">
+
+    <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/my_profile_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/settings"
+            android:textColor="@color/white_"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/my_profile_photo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/percon_icon"
+            app:layout_constraintBottom_toTopOf="@+id/my_profile_name"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.165"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_profile_bar"/>
+
+    <TextView
+            android:id="@+id/my_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            tools:text="@string/name"
+            android:textColor="@color/white_"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/my_profile_bar_career"
+            app:layout_constraintEnd_toEndOf="@+id/my_profile_photo"
+            app:layout_constraintStart_toStartOf="@+id/my_profile_photo"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_photo"/>
+
+    <TextView
+            android:id="@+id/my_profile_bar_career"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/career"
+            android:textColor="@color/white_"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/text_home_address"
+            app:layout_constraintEnd_toEndOf="@+id/my_profile_name"
+            app:layout_constraintStart_toStartOf="@+id/my_profile_name"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_name"/>
+
+    <TextView
+            android:id="@+id/text_home_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/home_address"
+            android:textColor="@color/white_"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/viewTop"
+            app:layout_constraintEnd_toEndOf="@+id/my_profile_bar_career"
+            app:layout_constraintStart_toStartOf="@+id/my_profile_bar_career"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_bar_career"/>
+
+    <ImageView
+            android:id="@+id/my_profile_facebook"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/facebook"
+            app:layout_constraintBottom_toBottomOf="@id/verGuideline3"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@+id/my_profile_linkedin"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop"/>
+
+    <ImageView
+            android:id="@+id/my_profile_linkedin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/linkedin"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/my_profile_vk"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toEndOf="@id/my_profile_facebook"
+            app:layout_constraintTop_toTopOf="@id/my_profile_facebook"/>
+
+    <ImageView
+            android:id="@+id/my_profile_vk"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/vk"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toEndOf="@id/my_profile_linkedin"
+            app:layout_constraintTop_toTopOf="@id/my_profile_linkedin"/>
+
+    <TextView
+            android:id="@+id/my_profile_go_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/go_to_settings"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/my_profile_edit_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/verGuideline3"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_profile_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_style_transparent_with_stroke"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/edit_profile"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/my_profile_my_contacts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_go_settings"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_profile_my_contacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_style_orange"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/view_my_contacts"
+            android:textColor="@color/white_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_profile_edit_profile"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verGuideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.77"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

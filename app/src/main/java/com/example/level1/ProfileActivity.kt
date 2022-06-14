@@ -14,6 +14,6 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.myProfileName.text = intent.getStringExtra(Constants.NAME_KEY)
+        binding.name.text = intent.getStringExtra(Constants.NAME_KEY)
     }
 }

@@ -17,148 +17,137 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/my_profile_bar"
+            android:id="@+id/bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/open_sans_semibold"
+            android:layout_marginStart="@dimen/AverageIndent"
+            android:layout_marginTop="@dimen/AverageIndent"
             android:text="@string/settings"
-            android:textColor="@color/white_"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/WhiteBigSize.Bolt"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/my_profile_photo"
+            android:id="@+id/photo"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:src="@drawable/percon_icon"
-            app:layout_constraintBottom_toTopOf="@+id/my_profile_name"
+            app:layout_constraintBottom_toTopOf="@+id/name"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.165"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/my_profile_bar"/>
+            app:layout_constraintTop_toBottomOf="@+id/bar"/>
 
     <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/my_profile_name"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans_semibold"
             tools:text="@string/name"
-            android:textColor="@color/white_"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/my_profile_bar_career"
-            app:layout_constraintEnd_toEndOf="@+id/my_profile_photo"
-            app:layout_constraintStart_toStartOf="@+id/my_profile_photo"
-            app:layout_constraintTop_toBottomOf="@id/my_profile_photo"/>
+            app:layout_constraintBottom_toTopOf="@id/career"
+            app:layout_constraintEnd_toEndOf="@+id/photo"
+            app:layout_constraintStart_toStartOf="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@id/photo"
+            style="@style/WhiteAboveAverageSize.Bolt"/>
 
     <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/my_profile_bar_career"
+            android:id="@+id/career"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_semibold"
             android:text="@string/career"
-            android:textColor="@color/white_"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/text_home_address"
-            app:layout_constraintEnd_toEndOf="@+id/my_profile_name"
-            app:layout_constraintStart_toStartOf="@+id/my_profile_name"
-            app:layout_constraintTop_toBottomOf="@id/my_profile_name"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/AverageSize"
+            app:layout_constraintBottom_toTopOf="@id/homeAddress"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"/>
 
     <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text_home_address"
+            android:id="@+id/homeAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_semibold"
             android:text="@string/home_address"
-            android:textColor="@color/white_"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/AverageSize"
             app:layout_constraintBottom_toBottomOf="@id/viewTop"
-            app:layout_constraintEnd_toEndOf="@+id/my_profile_bar_career"
-            app:layout_constraintStart_toStartOf="@+id/my_profile_bar_career"
-            app:layout_constraintTop_toBottomOf="@id/my_profile_bar_career"/>
+            app:layout_constraintEnd_toEndOf="@+id/career"
+            app:layout_constraintStart_toStartOf="@+id/career"
+            app:layout_constraintTop_toBottomOf="@id/career"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/my_profile_facebook"
+            android:id="@+id/facebookIcon"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/facebook"
+            app:srcCompat="@drawable/facebook"
             app:layout_constraintBottom_toBottomOf="@id/guideLine"
-            app:layout_constraintEnd_toStartOf="@+id/my_profile_linkedin"
+            app:layout_constraintEnd_toStartOf="@+id/linkedinIcon"
             app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewTop"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/my_profile_linkedin"
+            android:id="@+id/linkedinIcon"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/linkedin"
-            app:layout_constraintEnd_toStartOf="@id/my_profile_vk"
+            app:srcCompat="@drawable/linkedin"
+            app:layout_constraintEnd_toStartOf="@id/vkIcon"
             app:layout_constraintHeight_percent="0.07"
-            app:layout_constraintStart_toEndOf="@id/my_profile_facebook"
-            app:layout_constraintTop_toTopOf="@id/my_profile_facebook"/>
+            app:layout_constraintStart_toEndOf="@id/facebookIcon"
+            app:layout_constraintTop_toTopOf="@id/facebookIcon"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/my_profile_vk"
+            android:id="@+id/vkIcon"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/vk"
+            app:srcCompat="@drawable/vk"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.07"
-            app:layout_constraintStart_toEndOf="@id/my_profile_linkedin"
-            app:layout_constraintTop_toTopOf="@id/my_profile_linkedin"/>
+            app:layout_constraintStart_toEndOf="@id/linkedinIcon"
+            app:layout_constraintTop_toTopOf="@id/linkedinIcon"/>
 
     <TextView
-            android:id="@+id/my_profile_go_settings"
+            android:id="@+id/goSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans_semibold"
             android:text="@string/go_to_settings"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/my_profile_edit_profile"
+            app:layout_constraintBottom_toTopOf="@id/editProfileButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideLine"
-            app:layout_constraintVertical_chainStyle="spread_inside"/>
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            style="@style/BlueAverageSize"/>
 
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/my_profile_edit_profile"
+            android:id="@+id/editProfileButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/AverageIndent"
+            android:layout_marginEnd="@dimen/AverageIndent"
             android:background="@drawable/button_style_transparent_with_stroke"
-            android:fontFamily="@font/open_sans_semibold"
             android:text="@string/edit_profile"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/my_profile_my_contacts"
+            style="@style/BlueAverageSize"
+            app:layout_constraintBottom_toTopOf="@id/myContactsButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/my_profile_go_settings"/>
+            app:layout_constraintTop_toBottomOf="@id/goSettings"/>
 
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/my_profile_my_contacts"
+            android:id="@+id/myContactsButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/AverageIndent"
+            android:layout_marginEnd="@dimen/AverageIndent"
+            android:layout_marginBottom="@dimen/AverageIndent"
             android:background="@drawable/button_style_orange"
-            android:fontFamily="@font/open_sans_semibold"
+            style="@style/WhiteAverageSize"
             android:text="@string/view_my_contacts"
-            android:textColor="@color/white_"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/my_profile_edit_profile"/>
+            app:layout_constraintTop_toBottomOf="@id/editProfileButton"/>
 
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideLine"

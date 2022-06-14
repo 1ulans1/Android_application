@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BlueAverageSize">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/AverageSize</item>
+    </style>
+
+    <style name="WhiteAverageSize">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/AverageSize</item>
+    </style>
+
+    <style name="WhiteBigSize">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/BigSize</item>
+    </style>
+
+    <style name="WhiteBigSize.Bolt">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WhiteAboveAverageSize">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/AboveAverageSize</item>
+    </style>
+
+    <style name="WhiteAboveAverageSize.Bolt">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

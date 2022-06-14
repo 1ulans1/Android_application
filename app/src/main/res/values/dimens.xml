@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="AverageSize">14sp</dimen>
+    <dimen name="AboveAverageSize">18sp</dimen>
+    <dimen name="BigSize">24sp</dimen>
+
+    <dimen name="LittleIndent">8dp</dimen>
+    <dimen name="AverageIndent">16dp</dimen>
+
+</resources>

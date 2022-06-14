@@ -16,7 +16,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
             android:id="@+id/my_profile_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/my_profile_photo"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/my_profile_bar"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
             android:id="@+id/my_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
             app:layout_constraintStart_toStartOf="@+id/my_profile_photo"
             app:layout_constraintTop_toBottomOf="@id/my_profile_photo"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
             android:id="@+id/my_profile_bar_career"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             app:layout_constraintStart_toStartOf="@+id/my_profile_name"
             app:layout_constraintTop_toBottomOf="@id/my_profile_name"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_home_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,35 +82,31 @@
             app:layout_constraintStart_toStartOf="@+id/my_profile_bar_career"
             app:layout_constraintTop_toBottomOf="@id/my_profile_bar_career"/>
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/my_profile_facebook"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="20dp"
             android:src="@drawable/facebook"
-            app:layout_constraintBottom_toBottomOf="@id/verGuideline3"
-            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintBottom_toBottomOf="@id/guideLine"
             app:layout_constraintEnd_toStartOf="@+id/my_profile_linkedin"
             app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewTop"/>
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/my_profile_linkedin"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:src="@drawable/linkedin"
-            app:layout_constraintDimensionRatio="1"
             app:layout_constraintEnd_toStartOf="@id/my_profile_vk"
             app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toEndOf="@id/my_profile_facebook"
             app:layout_constraintTop_toTopOf="@id/my_profile_facebook"/>
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/my_profile_vk"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="20dp"
             android:src="@drawable/vk"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +125,7 @@
             app:layout_constraintBottom_toTopOf="@id/my_profile_edit_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/verGuideline3"
+            app:layout_constraintTop_toTopOf="@id/guideLine"
             app:layout_constraintVertical_chainStyle="spread_inside"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -165,7 +161,7 @@
             app:layout_constraintTop_toBottomOf="@id/my_profile_edit_profile"/>
 
     <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/verGuideline3"
+            android:id="@+id/guideLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

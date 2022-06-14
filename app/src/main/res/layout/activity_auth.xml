@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:background="@color/blue"
-                                                   android:padding="16dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:padding="16dp">
 
     <TextView
-            android:id="@+id/textView"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -16,12 +17,12 @@
             android:text="@string/let_s_get_acquainted"
             android:textColor="@color/white_"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/subTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/subTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
@@ -61,10 +62,11 @@
             app:layout_constraintBottom_toTopOf="@id/checkbox_remember_me">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_input_edit_input"
+                android:id="@+id/password_input_edit_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
+
                 android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,11 +78,11 @@
             android:text="@string/remember_me"
             android:textColor="@color/gray"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@id/gline"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
             tools:layout_editor_absoluteX="16dp"/>
 
     <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gline"
+            android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

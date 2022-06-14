@@ -2,8 +2,10 @@ package com.example.level1
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextWatcher
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
 import com.example.level1.data.storage.CacheDataSource
 import com.example.level1.data.storage.DataSource
@@ -15,6 +17,9 @@ class AuthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAuthBinding
 
+    private lateinit var emailTextWatcher: TextWatcher
+    private lateinit var passwordTextWatcher: TextWatcher
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -24,7 +29,6 @@ class AuthActivity : AppCompatActivity() {
         val dataSource = CacheDataSource(this)
 
         checkAuthorization(dataSource)
-
         setListener(dataSource)
     }
 
@@ -39,8 +43,7 @@ class AuthActivity : AppCompatActivity() {
     private fun setListener(dataSource: DataSource) {
 
         with(binding) {
-
-            binding.buttonRegister.setOnClickListener {
+            buttonRegister.setOnClickListener {
 
                 val email = emailInputEditLayout.text.toString()
                 val password = passwordInputEditLayout.text.toString()
@@ -49,11 +52,10 @@ class AuthActivity : AppCompatActivity() {
                 val passwordCorrect = Validator.regexValidation(password, Constants.REGEX_PASSWORD)
 
                 emailInputLayout.error = if (!emailCorrect) getString(R.string.incorrect_input) else ""
-
                 passwordInputLayout.error = if (!passwordCorrect) getString(R.string.incorrect_input) else ""
 
                 if (emailCorrect && passwordCorrect) {
-                    if (binding.checkboxRememberMe.isChecked) {
+                    if (checkboxRememberMe.isChecked) {
                         dataSource.saveString(Constants.LOGIN_KEY, email)
                         dataSource.saveString(Constants.PASSWORD_KEY, password)
                     }
@@ -61,10 +63,22 @@ class AuthActivity : AppCompatActivity() {
                 }
             }
         }
+    }
 
-        binding.passwordInputEditLayout.doAfterTextChanged { binding.passwordInputLayout.error = "" }
+    override fun onResume() {
+        super.onResume()
 
-        binding.emailInputEditLayout.doAfterTextChanged { binding.emailInputLayout.error = "" }
+        with(binding) {
+            emailTextWatcher = emailInputEditLayout.doAfterTextChanged { binding.emailInputLayout.error = "" }
+            passwordTextWatcher = passwordInputEditLayout.doAfterTextChanged { binding.passwordInputLayout.error = "" }
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        binding.emailInputEditLayout.removeTextChangedListener(emailTextWatcher)
+        binding.passwordInputEditLayout.removeTextChangedListener(passwordTextWatcher)
     }
 
     private fun goOnProfile(email: String) {
@@ -74,16 +88,3 @@ class AuthActivity : AppCompatActivity() {
         finish()
     }
 }
-
-//open class A {
-//    open fun foo() {
-//        print("foo")
-//    }
-//}
-//
-//class B : A() {
-//
-//    override fun foo() {
-//        super.foo()
-//    }
-//}

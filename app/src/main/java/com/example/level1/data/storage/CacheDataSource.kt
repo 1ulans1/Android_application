@@ -2,7 +2,7 @@ package com.example.level1.data.storage
 
 import android.content.Context
 
-class CatchDataSource(context: Context) : DataSource {
+class CacheDataSource(context: Context) : DataSource {
 
     private val sharedPreferences =
         context.getSharedPreferences("accountDetails", Context.MODE_PRIVATE)
